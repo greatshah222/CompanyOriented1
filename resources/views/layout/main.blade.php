@@ -22,7 +22,7 @@
 
 </head>
 <body>
-<div class="banner">
+
     <div class="header">
         <div class="container">
             <nav class="navbar navbar-default">
@@ -38,9 +38,10 @@
                 <!-- navbar-header -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="hvr-underline-from-center active">Home</a></li>
+                        <li><a href="{{url('/')}}" class="hvr-underline-from-center">Home</a></li>
                         <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li>
-                        <li><a href="#"class="hvr-underline-from-center scroll">Menu</a></li>
+                        <li><a href="{{url('menu')}}" class="hvr-underline-from-center">Menu</a></li>
+                        
                         <li><a href="#" class="hvr-underline-from-center scroll">Gallery</a></li>
                         <li><a href="#" class="hvr-underline-from-center scroll">LOGIN</a></li>
                         <li><a href="#" class="hvr-underline-from-center scroll">REGISTER</a></li>
@@ -57,58 +58,8 @@
 
         </div>
     </div>
-    <div class="banner-text">
-        <div class="container">
-            <div class="callbacks_container">
-                <ul class="rslides" id="slider3">
-                    <li>
-                        <div class="slider-info">
-                            <h3>Taste Something <span> New </span></h3>
+  
 
-                            <h4>DELICIOUS RECIPES</h4>
-                            <p class="sub-para">DISCOVER OUR RESTAURANT</p>
-
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="slider-info">
-                            <h3>Resteurant since <span>2007</span></h3>
-
-                            <h4>NATURAL FLAVOURS</h4>
-                            <p class="sub-para">DISCOVER OUR RESTAURANT</p>
-
-
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="slider-info">
-                            <h3>Taste Something <span> New </span></h3>
-
-                            <h4>DELICIOUS RECIPES</h4>
-                            <p class="sub-para">DISCOVER OUR RESTAURANT</p>
-
-
-                        </div>
-                    </li>
-                    <li>
-
-                        <div class="slider-info">
-                            <h3>We Believe in <span>Taste</span></h3>
-
-                            <h4>NATURAL FLAVOURS </h4>
-                            <p class="sub-para">DISCOVER OUR RESTAURANT</p>
-
-                        </div>
-                    </li>
-
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</div>
 
     <!-- //header -->
     <!-- banner-text -->

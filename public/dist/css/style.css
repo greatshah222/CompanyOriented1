@@ -33,7 +33,7 @@ body a:hover {
     position : relative;
     padding : 1em 0 0 0;
     border-bottom : 1px solid rgba(255, 255, 255, 0.39);
-    background : rgba(0, 0, 0, 0.19);
+    background: black !important ;
 
 }
 .navbar-header h1 {

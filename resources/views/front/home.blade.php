@@ -34,7 +34,7 @@
         <div class="wthree-agile-sevre-grids">
             <div class="col-md-3 wthree-agile-grid">
                 <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-                    <a href="#" class="hi-icon icon1"></a>
+                    <a href="{{url('menu')}}" class="hi-icon icon1"></a>
                 </div>
                 <h4>Menu</h4>
             </div>
