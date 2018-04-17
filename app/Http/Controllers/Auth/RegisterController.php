@@ -95,7 +95,7 @@ class RegisterController extends Controller
                 Mail::send('mails.confirmation', $data,function ($message) use ($data)
                 {
                     $message->to($data['email']);
-                    $message->subject('Registration Confirmation');
+                    $message->subject(' INDIAN CUISINE Registration Confirmation ');
                 });
 
                 return redirect(route('login'))->with('status','Confirmation email has been send from INDIAN CUISINE.Please, check your mail.');
