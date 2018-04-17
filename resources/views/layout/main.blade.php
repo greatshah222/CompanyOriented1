@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h1><a  href="#"><span>I</span>NDIAN <span>C</span>UISINE</a></h1>
+                    <h1><a  href="{{url('/')}}"><span>I</span>NDIAN <span>C</span>UISINE</a></h1>
                 </div>
                 <!-- navbar-header -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -43,8 +43,23 @@
                         <li><a href="{{url('menu')}}" class="hvr-underline-from-center">Menu</a></li>
                         
                         <li><a href="#" class="hvr-underline-from-center scroll">Gallery</a></li>
-                        <li><a href="#" class="hvr-underline-from-center scroll">LOGIN</a></li>
-                        <li><a href="#" class="hvr-underline-from-center scroll">REGISTER</a></li>
+                        @if (Route::has('login'))
+                            @auth
+                                <li><a href="{{url('/home')}}" class="hvr-underline-from-center">{{Auth::user()->name}}</a></li>
+                                <li><a href="{{url('/logout')}}">LOGOUT</a></li>
+                                <li><a href="#">MY CART <span class="badge badge-light">4</span></a></li>
+
+
+
+
+                            @else
+                                <li><a href="{{ route('login') }}">LOGIN</a></li>
+                                <li><a href="{{ route('register') }}">REGISTER</a></li>
+                                <li><a href="#"><span class="badge badge-light"></span></a></li>
+
+                            @endauth
+                        @endif
+
 
 
 
