@@ -12,6 +12,8 @@
     <link href="{{asset('dist/css/bootstrap.css')}}" type="text/css" rel="stylesheet" media="all">
     <link href="{{asset('dist/css/style.css')}}" type="text/css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="{{asset('dist/css/swipebox.css')}}">
+    <link href="{{asset('dist/css/menu.css')}}" type="text/css" rel="stylesheet" media="all">
+
 
     <link href="{{asset('dist/css/font-awesome.css')}}" rel="stylesheet">
 
@@ -38,11 +40,16 @@
                 <!-- navbar-header -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            @if(Auth::check() && Auth::user()->isAdmin())
+                                <a href="{{url('/admin')}}" class="hvr-underline-from-center">ADMIN PANEL</a>
+                            @endif
+                        </li>
+                        <li>
                         <li><a href="{{url('/')}}" class="hvr-underline-from-center">Home</a></li>
                         <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li>
                         <li><a href="{{url('menu')}}" class="hvr-underline-from-center">Menu</a></li>
                         
-                        <li><a href="#" class="hvr-underline-from-center scroll">Gallery</a></li>
                         @if (Route::has('login'))
                             @auth
                                 <li><a href="{{url('/home')}}" class="hvr-underline-from-center">{{Auth::user()->name}}</a></li>
