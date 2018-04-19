@@ -24,7 +24,10 @@
 </head>
 <body>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     <div class="header">
@@ -46,7 +49,10 @@
                         <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li>
                         <li><a href="{{url('menu')}}" class="hvr-underline-from-center">Menu</a></li>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                         
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
                         <li><a href="#" class="hvr-underline-from-center scroll">Gallery</a></li>
@@ -69,6 +75,7 @@
                         @endif
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -88,10 +95,15 @@
                 <div class="clearfix"> </div>
             </nav>
 
+=======
+>>>>>>> Stashed changes
         </div>
     </div>
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 

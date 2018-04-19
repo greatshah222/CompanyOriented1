@@ -2,8 +2,11 @@
 @extends('layout.main')
 
 
+<<<<<<< Updated upstream
 @section('content')
 
+=======
+>>>>>>> Stashed changes
 <div class="recipes-w3l-agile" id="menu">
     <div class="container">
         <h3 class="tittle">CLICK HERE TO SEE OUR MENU</h3>
