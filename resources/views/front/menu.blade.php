@@ -1,19 +1,19 @@
 @extends('layout.main')
 
-@section('content')'
+@section('content')
 <br>
 <br>
-<section class="most_popular_item_area menu_list_page">
-            <div class="container">
-                <div class="popular_filter">
-                    <ul>
-                        <li class="active" data-filter="*"><a href="">All</a></li>
-                        <li data-filter=".break"><a href="">Breakfast</a></li>
-                        <li data-filter=".lunch"><a href="">Lunch</a></li>
-                        <li data-filter=".dinner"><a href="">Dinner</a></li>
-                        <li data-filter=".snacks"><a href="">Snacks</a></li>
-                        <li data-filter=".coffee"><a href="">Coffee</a></li>
-                    </ul>
+<br>
+<br><br>
+<br>
+
+    <div class="row">
+        <div class="small-5 small-offset-1 columns">
+            <div class="item-wrapper">
+                <div class="img-wrapper">
+                    <a href="#">
+                        <img src="https://github.com/greatshah222/Software_development/blob/firstPhase/2.jpg?raw=true"/>
+                    </a>
                 </div>
                 <div class="p_recype_item_main">
                     <div class="row p_recype_item_active">
@@ -60,6 +60,15 @@
                     </div>
                 </div>
             </div>
+<<<<<<< Updated upstream
         </section>
                         
+=======
+        </div>
+    </div>
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 @endsection

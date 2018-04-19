@@ -33,9 +33,18 @@ body a:hover {
     position : relative;
     padding : 1em 0 0 0;
     border-bottom : 1px solid rgba(255, 255, 255, 0.39);
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     background: black !important ;
+=======
+    background-color: black !important;
+>>>>>>> Stashed changes
+=======
+    background-color: black !important;
+>>>>>>> Stashed changes
 
 }
+
 .navbar-header h1 {
     font-size : 3em;
     display : block;

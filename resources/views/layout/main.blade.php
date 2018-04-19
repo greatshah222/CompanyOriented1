@@ -42,15 +42,13 @@
                         <li><a href="{{url('/')}}" class="hvr-underline-from-center">Home</a></li>
                         <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li>
                         <li><a href="{{url('menu')}}" class="hvr-underline-from-center">Menu</a></li>
-                        
+
                         <li><a href="#" class="hvr-underline-from-center scroll">Gallery</a></li>
                         @if (Route::has('login'))
                             @auth
                                 <li><a href="{{url('/home')}}" class="hvr-underline-from-center">{{Auth::user()->name}}</a></li>
                                 <li><a href="{{url('/logout')}}">LOGOUT</a></li>
                                 <li><a href="#">MY CART <span class="badge badge-light">4</span></a></li>
-
-
 
 
                             @else
@@ -68,7 +66,16 @@
 
         </div>
     </div>
-  
+
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </nav>
+
+        </div>
+    </div>
+
+
 
 
     <!-- //header -->

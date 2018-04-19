@@ -4,8 +4,7 @@
 
 @section('content')
 
-
-    <div class="recipes-w3l-agile" id="menu">
+<div class="recipes-w3l-agile" id="menu">
     <div class="container">
         <h3 class="tittle">CLICK HERE TO SEE OUR MENU</h3>
         <div class="wthree-agile-sevre-grids">
@@ -210,5 +209,5 @@
     <div class="clearfix"> </div>
 </div>
 <!-- //contact -->
-    </div>
+
     @endsection
