@@ -48,7 +48,7 @@
                         <li>
                         <li><a href="{{url('/')}}" class="hvr-underline-from-center">Home</a></li>
                         <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li>
-                        <li><a href="{{url('menu')}}" class="hvr-underline-from-center">Menu</a></li>
+                        <li><a href="{{url('menus')}}" class="hvr-underline-from-center">Menu</a></li>
                         
                         @if (Route::has('login'))
                             @auth

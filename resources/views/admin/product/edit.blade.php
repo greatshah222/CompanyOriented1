@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <h3>Add Product</h3>
+    <h3>Edit Product</h3>
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            {!! Form::open(['route' => 'product.store', 'method' => 'POST', 'files' => true, 'data-parsley-validate'=>'']) !!}
+            {!! Form::model($product,['route' => ['product.update',$product->id], 'method' => 'PUT', 'files' => true]) !!}
             <div class="form-group">
                 {{ Form::label('image', 'Image') }}
                 {{ Form::file('image',array('class' => 'form-control')) }}
@@ -38,15 +38,10 @@
 
 
 
-
-
-
-            {{ Form::submit('Create', array('class' => 'btn btn-primary')) }}
+            {{ Form::submit('Edit Complete', array('class' => 'btn btn-primary')) }}
             {!! Form::close() !!}
+
 
         </div>
     </div>
-
-
-
 @endsection
