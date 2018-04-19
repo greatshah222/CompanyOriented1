@@ -13,9 +13,12 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
         return view('admin.index');
     })->name('admin.index');
 
+    Route::resource('product','ProductsController');
+    Route::resource('category','CategoriesController');
 });
 
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/confirmation/{token}','Auth\RegisterController@confirmation')->name('confirmation');
+
 
