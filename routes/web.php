@@ -19,3 +19,7 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/confirmation/{token}','Auth\RegisterController@confirmation')->name('confirmation');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
