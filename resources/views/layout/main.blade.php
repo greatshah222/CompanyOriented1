@@ -23,7 +23,10 @@
 
 </head>
 <body>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <div class="header">
         <div class="container">
             <nav class="navbar navbar-default">
@@ -42,7 +45,10 @@
                         <li><a href="{{url('/')}}" class="hvr-underline-from-center">Home</a></li>
                         <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li>
                         <li><a href="{{url('menu')}}" class="hvr-underline-from-center">Menu</a></li>
+<<<<<<< Updated upstream
                         
+=======
+>>>>>>> Stashed changes
                         <li><a href="#" class="hvr-underline-from-center scroll">Gallery</a></li>
                         @if (Route::has('login'))
                             @auth
@@ -52,6 +58,7 @@
 
 
 
+<<<<<<< Updated upstream
 
                             @else
                                 <li><a href="{{ route('login') }}">LOGIN</a></li>
@@ -75,6 +82,17 @@
         </div>
     </div>
   
+=======
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </nav>
+
+        </div>
+    </div>
+
+
+>>>>>>> Stashed changes
 
 
     <!-- //header -->
