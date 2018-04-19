@@ -11,6 +11,7 @@
     <!-- Custom Theme files -->
     <link href="{{asset('dist/css/bootstrap.css')}}" type="text/css" rel="stylesheet" media="all">
     <link href="{{asset('dist/css/style.css')}}" type="text/css" rel="stylesheet" media="all">
+    <link href="{{asset('dist/css/menu.css')}}" type="text/css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="{{asset('dist/css/swipebox.css')}}">
     <link href="{{asset('dist/css/menu.css')}}" type="text/css" rel="stylesheet" media="all">
 
