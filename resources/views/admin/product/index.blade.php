@@ -29,6 +29,7 @@
 
 
 
+
                     <th> <form action="{{route('product.destroy',$product->id)}}"  method="POST">
                             {{csrf_field()}}
                             {{method_field('DELETE')}}
@@ -55,6 +56,7 @@
             <h3>No product </h3>
             </table>
         @endforelse
+    </ul>
 
 
 

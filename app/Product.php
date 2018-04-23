@@ -12,4 +12,5 @@ class Product extends Model
         $this->belongsTo(Category::class);
     }
 
+
 }

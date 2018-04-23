@@ -3,13 +3,14 @@
 @section('content')
 
     <div class="navbar">
-        <a class="navbar-brand" href="">Categories=></a>
+        <a class="navbar-brand" href=""> Categories list</a>
+
         <ul class="nav navbar-nav">
             @if(!empty($categories))
                 @forelse($categories as $category)
 
                     <li>
-                        <a href="{{route('category.show',$category->id)}}">{{$category->name}}</a>
+                        <a href="{{route('category.show',$category->id)}}">View {{$category->name}}</a>
 
                         <form action="{{route('category.destroy',$category->id)}}"  method="POST">
                             {{csrf_field()}}

@@ -37,6 +37,8 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         Category::create($request->all());
+        session()->flash('notif','New Category added.');
+
         return back();
     }
 
@@ -87,6 +89,8 @@ class CategoriesController extends Controller
         $category=Category::find($id);
         $category->products()->delete();
         $category->delete();
+        session()->flash('notif','Category successfully deleted.');
+
         return back();
     }
 }
