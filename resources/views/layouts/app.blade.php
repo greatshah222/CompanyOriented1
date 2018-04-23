@@ -15,7 +15,11 @@
 </head>
 <body>
     <div id="app">
+<<<<<<< HEAD
         <nav class="navbar navbar-default navbar-static-top">
+=======
+        <nav class="navbar navbar-primary navbar-static-top">
+>>>>>>> 57bceb73c90bb8b3b1ce4bdcc02414f52112186f
             <div class="container">
                 <div class="navbar-header">
 

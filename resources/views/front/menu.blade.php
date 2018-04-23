@@ -1,3 +1,4 @@
+
 @extends('layout.main')
 
 @section('content')
@@ -60,15 +61,10 @@
                     </div>
                 </div>
             </div>
-<<<<<<< Updated upstream
+
         </section>
                         
-=======
         </div>
     </div>
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-@endsection
+
