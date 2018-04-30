@@ -24,9 +24,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/confirmation/{token}','Auth\RegisterController@confirmation')->name('confirmation');
 
 
-<<<<<<< HEAD
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-=======
->>>>>>> 57bceb73c90bb8b3b1ce4bdcc02414f52112186f

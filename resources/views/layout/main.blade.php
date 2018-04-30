@@ -26,7 +26,7 @@
 </head>
 <body>
 
-    <div class="header">
+    <div class="header" style="background:black">
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="navbar-header">

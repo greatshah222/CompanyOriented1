@@ -52,10 +52,6 @@
                             </div>
                         </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 57bceb73c90bb8b3b1ce4bdcc02414f52112186f
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
