@@ -19,10 +19,28 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
 
     Route::resource('product','ProductsController');
     Route::resource('category','CategoriesController');
+
 });
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/cart', 'CartController');
+Route::get('/cart/add-item/{id}', 'CartController@addItem')->name('cart.addItem');
+Route::group(['middleware'=>'auth'],function ()
+{
+    Route::get('food-info', 'CheckoutController@food')->name('checkout.food');
+
+});
+Route::resource('address','AddressController');
+Route::get('payment', 'CheckoutController@payment')->name('checkout.payment');
+Route::post('store-payment', 'CheckoutController@storePayment')->name('payment.store');
+
+
+
+
+
+
+
 Route::get('/users/confirmation/{token}','Auth\RegisterController@confirmation')->name('confirmation');
 
 

@@ -12,6 +12,8 @@
                     <th scope="col">Price</th>
                     <th scope="col">Description</th>
                     <th scope="col">Spiciness</th>
+                    <th scope="col">Category</th>
+
                     <th scope="col">Action</th>
 
 
@@ -26,6 +28,9 @@
                     <th colspan="1"><h4>{{$product->price}}</h4></th>
                     <th colspan="1"><h4>{{$product->description}}</h4></th>
                     <th colspan="1"><h4>{{$product->spiciness}}</h4></th>
+                    <th colspan="1"><h4>{{$product->category->name}}</h4></th>
+
+
 
 
 

@@ -36,7 +36,6 @@ body a:hover {
     background: black !important ;
 
 }
-
 .navbar-header h1 {
     font-size : 3em;
     display : block;
@@ -2239,6 +2238,7 @@ a.icon.gp {
         line-height : 1.42857143;
         font-size : 11px;
     }
+
 
 
 }

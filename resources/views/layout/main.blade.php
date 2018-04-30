@@ -14,6 +14,7 @@
     <link href="{{asset('dist/css/menu.css')}}" type="text/css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="{{asset('dist/css/swipebox.css')}}">
     <link href="{{asset('dist/css/menu.css')}}" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{{asset('//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css')}}">
 
 
     <link href="{{asset('dist/css/font-awesome.css')}}" rel="stylesheet">
@@ -26,7 +27,7 @@
 </head>
 <body>
 
-    <div class="header" style="background:black">
+    <div class="header">
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="navbar-header">
@@ -55,16 +56,24 @@
                             @auth
                                 <li><a href="{{url('/home')}}" class="hvr-underline-from-center">{{Auth::user()->name}}</a></li>
                                 <li><a href="{{url('/logout')}}">LOGOUT</a></li>
-                                <li><a href="#">MY CART <span class="badge badge-light">4</span></a></li>
+
+
 
 
                             @else
                                 <li><a href="{{ route('login') }}">LOGIN</a></li>
                                 <li><a href="{{ route('register') }}">REGISTER</a></li>
-                                <li><a href="#"><span class="badge badge-light"></span></a></li>
 
                             @endauth
                         @endif
+                        <li><a href="{{route('cart.index')}}">MY CART <span class="badge badge-light">{{Cart::count()}}</span></a></li>
+
+
+
+
+
+
+
 
                     </ul>
                 </div>
@@ -73,25 +82,24 @@
 
         </div>
     </div>
+  
 
-                    </ul>
+
+    <!-- //header -->
+    <!-- banner-text -->
+
+    <!-- //header -->
+    <!-- banner-text -->
+
+
+        @if(session()->has('notif'))
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Notificaton</strong> {{session()->get('notif')}}
                 </div>
-                <div class="clearfix"> </div>
-            </nav>
 
-        </div>
-    </div>
-
-
-
-
-    <!-- //header -->
-    <!-- banner-text -->
-
-    <!-- //header -->
-    <!-- banner-text -->
-
-    @yield('content')
+        @endif
+        @yield('content')
     <br>
 
 <!-- Footer -->
@@ -217,8 +225,10 @@
 <!-- Calendar -->
 <link rel="stylesheet" href="{{asset('dist/css/jquery-ui.css')}}" />
 <script src="{{asset('dist/js/jquery-ui.js')}}"></script>
+    <script src="{{asset('js/app1.js')}}"></script>
 
-<script>
+
+    <script>
     $(function() {
         $( "#datepicker" ).datepicker();
     });
@@ -262,7 +272,8 @@
 
 <!-- start-smooth-scrolling -->
 <script type="text/javascript" src="{{asset('dist/js/move-top.js')}}"></script>
-<script type="text/javascript" src="{{asset('dist/js/easing.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('dist/js/easing.js')}}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $(".scroll").click(function(event){
@@ -274,6 +285,81 @@
 </script>
 <!-- //end-smooth-scrolling -->
 <script src="{{asset('dist/js/bootstrap.js')}}"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        var stripe = Stripe('pk_test_FZz1641WpWy8vHCcYoxhtmVL');
+        var elements = stripe.elements();
+
+
+        var style = {
+            base: {
+                // Add your base input styles here. For example:
+                fontSize: '16px',
+                color: "#32325d",
+            }
+        };
+
+        // Create an instance of the card Element.
+        var card = elements.create('card', {style: style});
+
+        // Add an instance of the card Element into the `card-element` <div>.
+        card.mount('#card-element');
+
+        card.addEventListener('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Create a token or display an error when the form is submitted.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                    // Inform the customer that there was an error.
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    // Send the token to your server.
+                    stripeTokenHandler(result.token);
+                }
+            });
+        });
+        function stripeTokenHandler(token) {
+            // Insert the token ID into the form so it gets submitted to the server
+
+            var form = document.getElementById('payment-form');
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', token.id);
+            form.appendChild(hiddenInput);
+
+            // Submit the form
+            form.submit();
+        }
+    </script>
+
+    <script src="{{asset('//code.jquery.com/jquery-1.10.2.js')}}"></script>
+    <script src="{{asset('//code.jquery.com/ui/1.11.2/jquery-ui.js')}}"></script>
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker({
+
+            });
+
+
+        });
+
+
+    </script>
+
+
 
 </div>
 </body>

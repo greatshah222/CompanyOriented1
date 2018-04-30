@@ -41,7 +41,7 @@
                             <a href="{{asset('menu')}}"><h3>{{$menu->name}}</h3></a>
                             <h4>PRICE ${{$menu->price}}</h4>
                             <p>{{$menu->description}} </p>
-                            <a class="read_mor_btn" href="#">Add To Cart</a>
+                            <a class="read_mor_btn" href="{{route('cart.addItem',$menu->id)}}">Add To Cart</a>
 
                         </div>
                     </div>
