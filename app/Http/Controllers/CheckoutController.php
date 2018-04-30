@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Order;
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
@@ -37,11 +38,16 @@ class CheckoutController extends Controller
                 "description" => "Example charge"
             ));
 
-            session()->flash('notif','Category successfully deleted.');
-            return back();
         } catch (\Stripe\Error\Card $e) {
             // The card has been declined
-        }   }
+        }
+        //Create the order
+        Order::createOrder();
+
+        //redirect user to some page
+        return "Order completed";
+
+    }
 
 
 }
