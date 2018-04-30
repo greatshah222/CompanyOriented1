@@ -90,7 +90,9 @@
 
     <!-- //header -->
     <!-- banner-text -->
+    <div class="row">
 
+    <div class="col-md-3 col-md-offset-8">
 
         @if(session()->has('notif'))
                 <div class="alert alert-success">
@@ -99,6 +101,8 @@
                 </div>
 
         @endif
+    </div>
+    </div>
         @yield('content')
     <br>
 
