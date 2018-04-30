@@ -1,70 +1,84 @@
-
 @extends('layout.main')
 
 @section('content')
-<br>
-<br>
-<br>
-<br><br>
-<br>
 
-    <div class="row">
-        <div class="small-5 small-offset-1 columns">
-            <div class="item-wrapper">
-                <div class="img-wrapper">
-                    <a href="#">
-                        <img src="https://github.com/greatshah222/Software_development/blob/firstPhase/2.jpg?raw=true"/>
-                    </a>
-                </div>
-                <div class="p_recype_item_main">
-                    <div class="row p_recype_item_active">
-                        <div class="col-md-6 break snacks">
-                            <div class="media">
-                                <div class="media-left">
-                                <img src="{{asset('dist/images/recype/recype-1.jpg')}}" alt='what'>
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h3>grass Flavour</h3></a>
-                                    <h4>$32</h4>
-                                    <p>Lorem ipsum dolor sit amets, consectetur adipiscing </p>
-                                    <a class="read_mor_btn" href="#">Add To Cart</a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 break coffee">
-                            <div class="media">
-                                <div class="media-left">
-                                    <img src="{{asset('dist/images/recype/recype-2.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h3>Vegetable Flavour</h3></a>
-                                    <h4>$32</h4>
-                                    <p>Lorem ipsum dolor sit amets, consectetur adipiscing </p>
-                                    <a class="read_mor_btn" href="#">Add To Cart</a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+    <div class="navbar">
+        <a class="navbar-brand" href=""> Categories list</a>
+
+        <ul class="nav navbar-nav">
+            @if(!empty($categories))
+                @forelse($categories as $category)
+
+                    <li>
+                        <a href="{{route('category.show',$category->id)}}">View {{$category->name}}</a>
+
+                        <form action="{{route('category.destroy',$category->id)}}"  method="POST">
+                            {{csrf_field()}}
+                            {{method_field('DELETE')}}
+                            <input class="btn btn-sm btn-danger" type="submit" value="Delete">
+                        </form>
+
+                    </li>
+                @empty
+                    <li>No Items</li>
+                @endforelse
+            @endif
+
+        </ul>
+
+        <a class="btn btn-primary pull-right navbar-right" data-toggle="modal" href="#modal-id">Add Category</a>
+        <div class="modal fade" id="modal-id">
+            <div class="modal-dialog">
+                {!! Form::open(['route' => 'category.store', 'method' => 'post']) !!}
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Add New</h4>
                     </div>
-                </div>
-            </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            {{ Form::label('name', 'Name') }}
+                            {{ Form::text('name', null, array('class' => 'form-control')) }}
+                        </div>
 
-        </section>
-                        
-        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+
+
+                {!! Form::close() !!}
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </div>
 
+    @if(!empty($products))
+        <section>
 
+
+            <h3>Products</h3>
+
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Products</th>
+                </tr>
+                </thead>
+                <tbody>
+                @forelse($products as $product)
+                    <tr><td>{{$product->name}}</td></tr>
+                @empty
+                    <tr><td>no data</td></tr>
+                @endforelse
+
+                </tbody>
+            </table>
+        </section>
+    @endif
+
+@endsection

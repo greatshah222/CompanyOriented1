@@ -5,6 +5,8 @@ Route::get('/menus','FrontController@menus')->name('menus');
 Route::get('/menu','FrontController@menu')->name('menu');
 
 
+
+
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Auth::routes();

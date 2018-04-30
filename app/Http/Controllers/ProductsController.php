@@ -58,6 +58,7 @@ class ProductsController extends Controller
             $formInput['image']=$imageName;
         }
         Product::create($formInput);
+        session()->flash('notif','New Product Added.');
         return redirect()->route('product.index');
     }
 
@@ -105,6 +106,8 @@ class ProductsController extends Controller
             $formInput['image']=$imageName;
         }
         $product->update($formInput);
+        session()->flash('notif','Product successfully updated.');
+
         return redirect()->route('product.index');
     }
     /**
@@ -116,6 +119,8 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         Product::destroy($id);
+        session()->flash('notif','Product successfully deleted.');
+
         return back();
     }
     public function uploadImages($productId,Request $request)
