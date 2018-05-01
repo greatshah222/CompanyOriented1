@@ -37,6 +37,7 @@
                     <li><a href="{{url('admin/orders/pending')}}">Pending orders</a></li>
                     <li><a href="{{url('admin/orders/ready')}}">Ready orders</a></li>
 
+
                     <li><a href="{{url('admin/orders')}}">All orders</a></li>
 
 

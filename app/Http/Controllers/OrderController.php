@@ -15,12 +15,13 @@ class OrderController extends Controller
     {
         if ($type == 'pending') {
             $orders = Order::where('ready', '0')->get();
+
         } elseif ($type == 'ready') {
             $orders = Order::where('ready', '1')->get();
+
         } else {
             $orders = Order::all();
         }
-        session()->flash('notif',' Mail sent the food is ready to user.');
 
         return view('admin.orders', compact('orders'));
     }
@@ -40,6 +41,8 @@ class OrderController extends Controller
             $order->ready="0";
         }
         $order->save();
+        session()->flash('notif',' Mail sent the food is ready to user.');
+
 
         return back();
     }

@@ -110,6 +110,7 @@ class RegisterController extends Controller
             $user->confirmed = 1 ;
             $user->token = '';
             $user->save();
+            
             return redirect(route('login'))->with('status','Your activation is completed');
         }
 

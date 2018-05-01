@@ -13,7 +13,9 @@
                     <label for="ready">FOOD READY FOR PICKUP</label>
                     <input type="checkbox" value="1" name="ready"  {{$order->ready==1?"checked":"" }}>
                     <input type="submit" value="Submit">
+
                 </form>
+
 
                 <div class="clearfix"></div>
                 <hr>

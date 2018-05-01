@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Mail\GotNewOrder;
 use App\Mail\NewUserWelcome;
-use App\Mail\OldUserWelcome;
 use App\Order;
 
 use Gloudemans\Shoppingcart\Facades\Cart;
