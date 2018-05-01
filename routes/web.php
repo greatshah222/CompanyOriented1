@@ -1,5 +1,5 @@
 <?php
-Route::get('/','FrontController@index')->name('home');
+Route::get('/','FrontController@index')->name('name');
 
 Route::get('/menus','FrontController@menus')->name('menus');
 Route::get('/menu','FrontController@menu')->name('menu');
@@ -12,6 +12,8 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Auth::routes();
 
 Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
+    Route::post('toggledeliver/{orderId}', 'OrderController@toggledeliver')->name('toggle.deliver');
+
     Route::get('/',function ()
     {
         return view('admin.index');
@@ -19,6 +21,8 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
 
     Route::resource('product','ProductsController');
     Route::resource('category','CategoriesController');
+    Route::get('orders/{type?}', 'OrderController@Orders');
+
 
 });
 

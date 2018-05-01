@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('total');
-            $table->tinyInteger('ready')->nullable();
+            $table->tinyInteger('ready')->default(0);
 
 
 

@@ -6,6 +6,7 @@ use App\Order;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class CheckoutController extends Controller
 {
@@ -28,6 +29,10 @@ class CheckoutController extends Controller
         return view('front.payment');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function storePayment(Request $request)
     {
         try {
@@ -45,7 +50,10 @@ class CheckoutController extends Controller
         Order::createOrder();
 
         //redirect user to some page
-        return "Order completed";
+        session()->flash('notif',' Thankyou for the purchase.You will be notified when the food is ready');
+
+Session::forget('cart');
+        return redirect()->route('name');
 
     }
 
