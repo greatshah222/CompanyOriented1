@@ -20,6 +20,7 @@ class OrderController extends Controller
         } else {
             $orders = Order::all();
         }
+        session()->flash('notif',' Mail sent the food is ready to user.');
 
         return view('admin.orders', compact('orders'));
     }
