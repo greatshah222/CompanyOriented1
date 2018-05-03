@@ -83,6 +83,12 @@ class RegisterController extends Controller
         $input = $request->all();
         $validator = $this->validator($input);
 
+        if($validator->fails())
+        {
+            return Redirect::back()->withInput()->withErrors($validator);
+        }
+
+
 
         if ($validator->passes()){
             $data = $this->create($input)->toArray();
