@@ -1022,7 +1022,7 @@ span.simply-word {
     padding : 0;
 }
 .contact-right {
-    background : url(../images/contact.jpg) center 0 no-repeat;
+   /* background : url(../images/banner.jpg) center 0 no-repeat;   */
     background-size : cover;
     padding : 0;
 }

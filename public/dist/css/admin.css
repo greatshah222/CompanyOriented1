@@ -13,7 +13,21 @@ body {
     margin-top: 30px;
 }
 
-/* Footer */
+.adminbar{
+    background: black;
+}
+.adminbar a{
+    color: #FFFFBB;
+}
+.adminbar a:hover , .fontnav li a:hover{
+    text-decoration:none;
+   color: #4566a9 !important;
+}
+.fontnav li a{
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    color: #FFFFBB !important;
+}
 
 footer {
     background-color: #2c3742;

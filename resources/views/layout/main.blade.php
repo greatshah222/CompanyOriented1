@@ -49,7 +49,7 @@
                         </li>
                         <li>
                         <li><a href="{{url('/')}}" class="hvr-underline-from-center">Home</a></li>
-                        <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li>
+                        <!-- <li><a href="#" class="hvr-underline-from-center scroll">Contact us </a></li> -->
                         <li><a href="{{url('menus')}}" class="hvr-underline-from-center">Menu</a></li>
                         
                         @if (Route::has('login'))
@@ -112,14 +112,14 @@ l
         <div class="footer-info-agile">
             <div class="col-md-4 footer-info-grid address">
                 <h4>Contact <span class="opening">Us</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Agile ac.</p>
+                <p>We Serve quality Indian Food.</p>
                 <address>
                     <ul>
-                        <li>New York City</li>
-                        <li>40019 Bronx,Morris Park</li>
+                        <li>Kajaaninkatu 38</li>
+                        <li>90100, Oulu</li>
 
                         <li>Telephone </li>
-                        <li>Email : <a class="mail" href="mailto:mail@example.com">info(at)example.com</a></li>
+                        <li>Email : <a class="mail" href="mailto:oulu@indiancuisine.fi">oulu@indiancuisine.fi</a></li>
                     </ul>
                 </address>
             </div>
@@ -127,13 +127,13 @@ l
                 <h4>Opening <span class="opening">Hours</span></h4>
                 <ul class="times">
 
-                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Monday</span><div class="hours">09 am - 010 pm</div>  <div class="clearfix"></div></li>
-                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Tuesday</span><div class="hours">09 am - 010 pm</div>  <div class="clearfix"></div></li>
-                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Wednesday</span><div class="hours">09 am - 010 pm</div>  <div class="clearfix"></div></li>
-                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Thursday</span><div class="hours">09 am - 010 pm</div>  <div class="clearfix"></div></li>
-                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Friday</span><div class="hours">11 am - 08 pm</div>  <div class="clearfix"></div></li>
-                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Saturday</span><div class="hours">10 am - 11 pm</div>  <div class="clearfix"></div></li>
-                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Sunday</span><div class="hours">Closed</div>  <div class="clearfix"></div></li>
+                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Monday</span><div class="hours">10:30 - 22: 00</div>  <div class="clearfix"></div></li>
+                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Tuesday</span><div class="hours">10:30 - 22: 00</div>  <div class="clearfix"></div></li>
+                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Wednesday</span><div class="hours">10:30 - 22: 00</div>  <div class="clearfix"></div></li>
+                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Thursday</span><div class="hours">10:30 - 22: 00</div>  <div class="clearfix"></div></li>
+                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Friday</span><div class="hours">10:30 - 23: 00</div>  <div class="clearfix"></div></li>
+                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Saturday</span><div class="hours">12:00 - 23: 00</div>  <div class="clearfix"></div></li>
+                    <li><i class="glyphicon glyphicon-time"> </i><span class="week">Sunday</span><div class="hours">12:00 - 21: 00</div>  <div class="clearfix"></div></li>
 
                 </ul>
             </div>
@@ -169,30 +169,24 @@ l
                 <h5>CONNECT WITH US</h5>
                 <section class="social">
                     <ul>
-                        <li><a class="icon fb" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="icon tw" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="icon fb" href="https://www.facebook.com/NusratAri/?ref=br_rs"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="icon tw" href="https://twitter.com/indiancoulu"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="icon tw" href="https://www.instagram.com/ouluindiancuisine/"><i class="fa fa-instagram"></i></a></li>
 
-                        <li><a class="icon pin" href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a class="icon db" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="icon gp" href="#"><i class="fa fa-google-plus"></i></a></li>
                     </ul>
                 </section>
 
             </div>
             <div class="col-md-6 newsletter">
-                <h5>NEWSLETTER</h5>
+                
 
-                <form action="#" method="post" class="newsletter">
-                    <input class="email" type="email" placeholder="Your email address..." required="">
-
-                    <input type="submit" class="submit" value="">
-                </form>
+               
             </div>
             <div class="clearfix"></div>
         </div>
     </div>
     <div class="copyright-wthree">
-<p>OAMK</p>    </div>
+<p>Indian Cuisine</p>    </div>
 </div>
 
 

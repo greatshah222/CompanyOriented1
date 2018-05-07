@@ -16,7 +16,7 @@
         <div class="wthree-agile-sevre-grids">
             <div class="col-md-4 wthree-agile-grid">
                 <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-                    <a href="{{url('menu')}}" class="hi-icon icon1"></a>
+                    <a href="{{url('menus')}}" class="hi-icon icon1"></a>
                 </div>
                 <h4>Menu</h4>
             </div>
@@ -36,10 +36,10 @@
                 <div class="hover ehover8">
                     <img class="img-responsive" src="{{asset('dist/images/t1.jpg')}}" alt="">
                     <div class="overlay point" data-toggle="modal" data-target="#modal8">
-                        <h4>JAYE SMITH</h4>
+                        <h4>Arindam Mallick</h4>
                         <p class="set1">
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/indiancuisine.oulu"><i class="fa fa-facebook"></i></a>
                         </p>
                         <hr><hr>
                         <p class="set2">
@@ -53,10 +53,10 @@
                 <div class="hover ehover8">
                     <img class="img-responsive" src="{{asset('dist/images/t2.jpg')}}" alt="">
                     <div class="overlay point" data-toggle="modal" data-target="#modal8">
-                        <h4>CHRISTOPHER</h4>
+                        <h4>Nusrat Bushra</h4>
                         <p class="set1">
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/nusrat.bushra"><i class="fa fa-facebook"></i></a>
                         </p>
                         <hr><hr>
                         <p class="set2">
@@ -152,7 +152,7 @@
 <!-- //reservation -->
 <!-- contact -->
 <div class="contact" id="contact">
-    <div class="col-md-6 contact-right">
+    <!-- <div class="col-md-6 contact-right">
         <div class="wthree-contact-row">
             <h4>GET IN TOUCH</h4>
             <form action="#" method="post">
@@ -162,9 +162,12 @@
                 <input type="submit" value="SUBMIT">
             </form>
         </div>
-    </div>
-    <div class="col-md-6 contact-left">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57537.641430789925!2d-74.03215321337959!3d40.719122105634035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1456152197129" allowfullscreen=""></iframe>
+    </div> -->
+    <div class="col-md-12 contact-left">
+        <iframe 
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWZyXC6wygEYR-esLSuv6Smk&key=AIzaSyAY_t0g7eVuGqhcZSTLOvppGHx1i2P-j9Y"
+         allowfullscreen>
+    </iframe>
     </div>
 
     <div class="clearfix"> </div>

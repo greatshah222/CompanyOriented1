@@ -12,10 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('dist/css/admin.css')}}" type="text/css" rel="stylesheet" media="all">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-primary navbar-static-top">
+        <nav class="adminbar navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
 
@@ -28,9 +29,10 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    
+                   <h1> <a href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }} 
+                    </a></h1>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -40,7 +42,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="fontnav nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>

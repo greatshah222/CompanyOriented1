@@ -5,7 +5,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading">
+                    <Header>Login</Header>
+                    </div>
 
                 <div class="panel-body">
 
@@ -65,13 +67,20 @@
                                     Login
                                 </button>
 
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                
+                               
+                                
+                            </div>
+                           <div class="col-md-offset-4"> 
+                               <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
-                            </div>
+                                <br />
+                                <a class="btn btn-link" href="{{ route('register') }}">
+                                    Register new account
+                                </a></div>
                         </div>
-
+                             
                     </form>
                 </div>
             </div>
